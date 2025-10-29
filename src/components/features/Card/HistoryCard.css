@@ -13,6 +13,13 @@
 .history-card .history-card-icon {
     width: 32px;
     height: 32px;
+    fill: var(--kutg-color);
+    transition: all 0.3s ease;
+}
+
+.history-card:hover .history-card-icon {
+    fill: var(--kutg-color);
+    transform: scale(1.1);
 }
 
 .history-card__title {

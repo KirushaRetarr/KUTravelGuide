@@ -18,25 +18,22 @@ export default function LoginPage() {
         }
 
         try {
-            const response = await fetch("/api/users/login", {
-                method: "POST",
-                credentials: "include",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({ login, password }),
-            });
+
+            const response = await fetch(`/api/users/login/${login}`);
+            console.log(`/api/users/login/${login}`);
 
             if (!response.ok) {
                 const msg = await response.text();
                 throw new Error(msg);
             }
-
+            console.log(response);
 
             const user = await response.json();
-            console.log(user);
+
             localStorage.setItem("user", JSON.stringify(user));
+
             navigate("/");
+
         } catch (err) {
             if (err instanceof Error) {
                 setError(err.message);

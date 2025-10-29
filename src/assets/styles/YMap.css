@@ -3,6 +3,17 @@
     height: 100% !important;
 }
 
+/* Перекрашивание иконок на карте в акцентный цвет */
+.ymaps-2-1-79-placemark-overlay {
+    filter: hue-rotate(195deg) saturate(1.5) brightness(0.9) !important;
+}
+
+.ymaps-2-1-79-placemark-overlay:hover {
+    filter: hue-rotate(195deg) saturate(1.7) brightness(1.1) !important;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
 .map-container {
     width: 100vw;
     height: 100vh;
