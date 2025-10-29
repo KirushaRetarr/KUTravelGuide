@@ -120,13 +120,14 @@ export default function Get() {
             </div>
           </Tab>
           <Tab id='schedule' label='Учеба' icon={faCalendarAlt}>
-            <div style={{ padding: '16px' }}>
+            <div style={{ paddingTop: '16px' }}>
               <h3 style={{ 
                 fontSize: '20px', 
                 fontWeight: '700', 
                 color: 'var(--kutg-color)', 
                 marginBottom: '20px',
                 paddingBottom: '12px',
+                paddingLeft: '16px',
                 borderBottom: '2px solid rgba(var(--kutg-color-for-rgba), 0.15)'
               }}>
                 Моё расписание
@@ -199,6 +200,13 @@ export default function Get() {
           <Tab id='bookmarks' label='Закладки' icon={faBookmark}>
           </Tab>
           <Tab id='help' label='Помощь' icon={faQuestionCircle}>
+          <input
+                id="buildingSearch"
+                type="search"
+                onChange={handleInput}
+                placeholder="Поиск..."
+                style={{ paddingTop: '16px', paddingBottom: '16px' }}
+              />
             <div>
               <CollapsibleSection title="Документы и справки">
                 <QuestionCard

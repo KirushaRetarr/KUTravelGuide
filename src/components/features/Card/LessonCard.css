@@ -1,11 +1,8 @@
 .lesson-card {
     width: 100%;
     background: linear-gradient(135deg, #fff 0%, rgba(255, 255, 255, 0.98) 100%);
-    border-radius: 16px;
     padding: 18px 24px;
-    box-shadow: 0 3px 10px rgba(0, 165, 188, 0.1);
-    border: 1px solid rgba(var(--kutg-color-for-rgba), 0.1);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-bottom: 1px solid rgba(var(--kutg-color-for-rgba), 0.1);
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -14,27 +11,8 @@
     overflow: hidden;
 }
 
-.lesson-card::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 4px;
-    background: linear-gradient(180deg, var(--kutg-color) 0%, transparent 100%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.lesson-card:hover::before {
-    opacity: 1;
-}
-
 .lesson-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 24px rgba(0, 165, 188, 0.2);
     background: linear-gradient(135deg, rgba(var(--kutg-color-for-rgba), 0.06) 0%, rgba(var(--kutg-color-for-rgba), 0.02) 100%);
-    border-color: rgba(var(--kutg-color-for-rgba), 0.25);
 }
 
 .lesson-card__content {
